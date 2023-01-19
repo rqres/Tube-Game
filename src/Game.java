@@ -324,7 +324,7 @@ public class Game {
 
         HashSet<Station> neighbours = currentStation.getNeighbours();
         Station nextStation = null;
-        for (var neighbour : neighbours)
+        for (Station neighbour : neighbours)
             if (neighbour.getName().equals(destination)) {
                 nextStation = neighbour;
                 break;
@@ -395,7 +395,7 @@ public class Game {
         String destination = command.getSecondWord();
         // Try to leave current station.
         Station nextStation = null;
-        for (var exit : exits)
+        for (Station exit : exits)
             if (exit.getName().equals(destination)) {
                 nextStation = exit;
                 break;

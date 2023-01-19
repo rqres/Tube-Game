@@ -80,7 +80,7 @@ public class Station {
      */
     public HashSet<Station> getNeighbours() {
         HashSet<Station> results = new HashSet<>();
-        for (var entry : neighbours)
+        for (Station entry : neighbours)
             if (!entry.isExit()) {
                 results.add(entry);
             }
@@ -93,7 +93,7 @@ public class Station {
      */
     public String getNeighboursString() {
         String returnString = "";
-        for (var neighbour : getNeighbours())
+        for (Station neighbour : getNeighbours())
             returnString += " " + neighbour.getName();
         return returnString;
     }
@@ -104,7 +104,7 @@ public class Station {
      */
     public HashSet<Station> getExits() {
         HashSet<Station> results = new HashSet<>();
-        for (var neighbour : neighbours)
+        for (Station neighbour : neighbours)
             if (neighbour.isExit()) {
                 results.add(neighbour);
             }
@@ -117,7 +117,7 @@ public class Station {
      */
     public String getExitsString() {
         String returnString = "";
-        for (var exit : getExits())
+        for (Station exit : getExits())
                 returnString += " " + exit.getName();
         return returnString;
     }
